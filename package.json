@@ -2,6 +2,15 @@
   "name": "practice",
   "private": true,
   "version": "0.0.0",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -28,6 +37,7 @@
     "globals": "^16.5.0",
     "husky": "^8.0.3",
     "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
     "vite": "^7.2.4"
   }
 }

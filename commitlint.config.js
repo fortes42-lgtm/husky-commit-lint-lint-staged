@@ -1,12 +1,7 @@
-module.exports = {
-  extends: ["@commitlint/config-conventional"],
+export default { 
+  extends: ['@commitlint/config-conventional'],
   rules: {
-    "type-enum": [
-      2,
-      "always",
-      ["feat", "fix", "refactor", "style", "docs", "chore"], // allowed types
-    ],
-    "subject-pattern": [2, "always", /^.+\(#\d+\)$/],
-    "subject-case": [0],
-  },
+    'header-pattern': [/^(feat|fix|chore|docs|style|refactor|test|perf): .+\(#\d+\)$/, 'i'],
+    'header-max-length': [72, 'always']
+  }
 };
